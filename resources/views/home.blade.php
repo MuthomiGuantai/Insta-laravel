@@ -8,7 +8,9 @@
             />
         </div>
         <div class="col-9 p-5">
-            <div><h1>BruceGram</h1></div>
+            <div>
+                <h1>{{ $user->username }}</h1>
+            </div>
             <div class="d-flex">
                 <div class="pr-3"><strong>30</strong> posts</div>
                 <div class="pr-3"><strong>400</strong> followers</div>
