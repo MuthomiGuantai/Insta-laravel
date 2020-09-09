@@ -8,8 +8,9 @@
             />
         </div>
         <div class="col-9 p-5">
-            <div>
+            <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
+                <a href="#">Add new Post</a>
             </div>
             <div class="d-flex">
                 <div class="pr-3"><strong>30</strong> posts</div>
@@ -17,17 +18,15 @@
                 <div class="pr-3"><strong>460</strong> following</div>
             </div>
             <div class="pt-4 font-weight-bold">
-                Bruce Muthomi Guantai
+                {{ $user->profile->title }}
             </div>
             <div>
-                A software developer with experience and skills in android
-                development with java, web development frontend React/js backend
-                Python/Django open source enthusiast with a great admiration for
-                teamwork and collaboration.
+                {{ $user->profile->description }}
             </div>
             <div>
-                <a href="https://muthomiguantai.github.io/MuthomiGuantai.com/"
-                    >muthomiguantai.com</a
+                <a
+                    href="https://muthomiguantai.github.io/MuthomiGuantai.com/"
+                    >{{ $user->profile->url ?? 'N/A' }}</a
                 >
             </div>
         </div>
