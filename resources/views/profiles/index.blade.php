@@ -3,8 +3,8 @@
     <div class="row">
         <div class="col-3 p-5">
             <img
-                src="https://instagram.fmba1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/67167453_341653786718820_6068681814497558528_n.jpg?_nc_ht=instagram.fmba1-1.fna.fbcdn.net&_nc_ohc=ppBW0rg1YNYAX-tlYqg&oh=df466ee7dab95d3d154bf4d9a6ff72ba&oe=5F8269C0"
-                class="rounded-circle"
+                src="/storage/{{ $user->profile->image }}"
+                class="rounded-circle w-100"
             />
         </div>
         <div class="col-9 p-5">
