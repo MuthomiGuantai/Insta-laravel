@@ -10,11 +10,13 @@ class ProfilesController extends Controller
 {
     public function index(User $user)
     {
-        return view('profile.index', compact('user'));
+        return view('profiles.index', compact('user'));
     }
 
     public function edit(User $user)
     {
+        $this->authorize('update', $user->profile);
+
         return view('profiles.edit', compact('user'));
     }
 
@@ -27,7 +29,7 @@ class ProfilesController extends Controller
             'image' => '',
         ]);
 
-        $user->profile->update($data);
+        auth()->user()->profile->update($data);
 
         return redirect("/profile/{$user->id}");
     
